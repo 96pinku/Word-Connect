@@ -1,0 +1,85 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: aqua;
+  border: 8px solid black;
+}
+
+.itemBtn {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid grey;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: medium;
+}
+
+.reset {
+  background-color: blue;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.highlight {
+  background-color: lightblue;
+}
+
+.success {
+  background-color: lightgreen;
+}
+
+.failure {
+  background-color: lightcoral;
+}
+
+[data-status] button {
+  cursor: not-allowed;
+}
+
+.text-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 column on mobile devices */
+  }
+  .itemBtn {
+    font-size: small; /* Reduce font size on smaller screens */
+    padding: 8px 4px; /* Adjust padding */
+  }
+  .reset {
+    padding: 0.4rem 0.8rem; /* Adjust padding for reset button */
+  }
+}
